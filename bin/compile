@@ -51,7 +51,8 @@ function indent() {
 #VERSION_FIREFOX=82.0.1
 #VERSION_GECKODRIVER=0.27.0
 
-VERSION_FIREFOX=82.0.3
+#VERSION_FIREFOX=82.0.3
+VERSION_FIREFOX=83.0
 VERSION_GECKODRIVER=0.28.0
 
 LANG=en-US
@@ -71,7 +72,7 @@ case "$STACK" in
   "cedar-14")
     PACKAGES="libxss1"
     ;;
-  "heroku-16" | "heroku-18")
+  "heroku-16" | "heroku-18" | "heroku-20")
     PACKAGES="
       libappindicator1
       libasound2
