@@ -51,8 +51,9 @@ function indent() {
 #VERSION_FIREFOX=82.0.1
 #VERSION_GECKODRIVER=0.27.0
 
-#VERSION_FIREFOX=82.0.3
-VERSION_FIREFOX=83.0
+
+#VERSION_FIREFOX=83.0 Worked
+VERSION_FIREFOX=84.0
 VERSION_GECKODRIVER=0.28.0
 
 LANG=en-US
@@ -100,7 +101,7 @@ case "$STACK" in
     "
     ;;
   *)
-    error "STACK must be 'cedar-14', 'heroku-16', or 'heroku-18'"
+    error "STACK must be 'cedar-14', 'heroku-16', or 'heroku-18' or 'heroku-20'"
 esac
 
 if [ ! -f $CACHE_DIR/PURGED_CACHE_V1 ]; then
