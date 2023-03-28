@@ -92,6 +92,8 @@ case "$STACK" in
       libxt6
       libxtst6
       fonts-liberation
+      firefox-esr
+      apt-cache
     "
     ;;
   *)
