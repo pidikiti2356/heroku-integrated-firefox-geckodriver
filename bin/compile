@@ -68,6 +68,7 @@ case "$STACK" in
     ;;
   "heroku-16" | "heroku-18" | "heroku-20")
     PACKAGES="
+      libc-dev
       libappindicator1
       libasound2
       libatk1.0-0
@@ -150,6 +151,7 @@ mkdir -p $CACHE_DIR/$ARCHIVE_NAME_FIREFOX
 mkdir -p $BUILD_DIR/vendor
 tar jxf $CACHE_DIR/$FILE_NAME_FIREFOX -C $CACHE_DIR
 mv $CACHE_DIR/$ARCHIVE_NAME_FIREFOX $BUILD_DIR/vendor/
+chmod +x $BUILD_DIR/vendor/
 
 # Install Geckodriver
 if ! [ -e $CACHE_DIR/$FILE_NAME_GECKODRIVER ]; then
@@ -163,6 +165,7 @@ mkdir -p $BUILD_DIR/vendor/$ARCHIVE_NAME_GECKODRIVER
 tar -xzf $CACHE_DIR/$FILE_NAME_GECKODRIVER -C $CACHE_DIR
 chmod +x $CACHE_DIR/$ARCHIVE_NAME_GECKODRIVER
 mv $CACHE_DIR/$ARCHIVE_NAME_GECKODRIVER $BUILD_DIR/vendor/$ARCHIVE_NAME_GECKODRIVER/
+chmod +x $BUILD_DIR/vendor/$ARCHIVE_NAME_GECKODRIVER/
 
 topic "Setting paths"
 mkdir -p $BUILD_DIR/.profile.d
